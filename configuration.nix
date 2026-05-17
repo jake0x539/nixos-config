@@ -60,6 +60,7 @@
 
   nixpkgs.config.cudaSupport = true;
   boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
+  boot.kernelModules = [ "ntsync" ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
