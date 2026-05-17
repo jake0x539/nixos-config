@@ -1,0 +1,20 @@
+--- a/src/backends/native/meta-seat-impl.c
++++ b/src/backends/native/meta-seat-impl.c
+@@ -2247,7 +2247,7 @@
+   if (libinput_event_pointer_has_axis (axis_event,
+                                        LIBINPUT_POINTER_AXIS_SCROLL_VERTICAL))
+     {
+-      dy = libinput_event_pointer_get_scroll_value (
++      dy = 2.5 * libinput_event_pointer_get_scroll_value (
+           axis_event, LIBINPUT_POINTER_AXIS_SCROLL_VERTICAL);
+ 
+       if (fabs (dy) < DBL_EPSILON)
+@@ -2277,7 +2277,7 @@
+   if (libinput_event_pointer_has_axis (axis_event,
+                                        LIBINPUT_POINTER_AXIS_SCROLL_VERTICAL))
+     {
+-      dy_value120 = libinput_event_pointer_get_scroll_value_v120 (
++      dy_value120 = 2.5 * libinput_event_pointer_get_scroll_value_v120 (
+           axis_event, LIBINPUT_POINTER_AXIS_SCROLL_VERTICAL);
+     }
+ 
