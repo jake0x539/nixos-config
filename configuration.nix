@@ -37,7 +37,6 @@
     })
   ];
 
-
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   nix.settings = {
@@ -60,7 +59,7 @@
 
   nixpkgs.config.cudaSupport = true;
   boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
-  boot.kernelModules = [ "ntsync" ];
+  boot.kernelModules = ["ntsync"];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
@@ -313,6 +312,8 @@
     enable = true;
     dockerCompat = true;
   };
+
+  hardware.nvidia-container-toolkit.enable = true;
 
   system.stateVersion = "25.11";
 }
