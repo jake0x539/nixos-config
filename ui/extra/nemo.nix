@@ -6,20 +6,19 @@
 }: {
   home.packages = with pkgs; [
     nemo-with-extensions
+    file-roller
     nemo-fileroller
   ];
 
-  xdg.mimeApps.enable = true;
-
   xdg.mimeApps.defaultApplications = {
     "inode/directory" = ["nemo.desktop"];
-    "application/zip" = ["nemo.desktop"];
-    "application/x-zip-compressed" = ["nemo.desktop"];
-    "application/x-tar" = ["nemo.desktop"];
-    "application/x-gzip" = ["nemo.desktop"];
-    "application/x-bzip2" = ["nemo.desktop"];
-
     "application/x-gnome-saved-search" = ["nemo.desktop"];
+
+    "application/zip" = ["org.gnome.FileRoller.desktop"];
+    "application/x-zip-compressed" = ["org.gnome.FileRoller.desktop"];
+    "application/x-tar" = ["org.gnome.FileRoller.desktop"];
+    "application/x-gzip" = ["org.gnome.FileRoller.desktop"];
+    "application/x-bzip2" = ["org.gnome.FileRoller.desktop"];
   };
 
   dconf.settings = lib.mkIf osConfig.services.desktopManager.gnome.enable {

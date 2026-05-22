@@ -89,6 +89,10 @@
   services.desktopManager.gnome.enable = true;
   services.displayManager.gdm.enable = true;
 
+  environment.gnome.excludePackages = with pkgs; [
+    epiphany
+  ];
+
   # Japanese support
   fonts.packages = with pkgs; [
     noto-fonts
