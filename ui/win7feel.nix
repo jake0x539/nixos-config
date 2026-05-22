@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    ./config/tiling.nix
+    # ./config/tiling.nix
     ./extra/ulauncher.nix
     ./extra/nemo.nix
     ./extra/gnome-specific.nix
@@ -43,8 +43,8 @@
     };
 
     "org/gnome/shell/extensions/dash-to-panel" = {
-      panel-position = "BOTTOM";
-      panel-size = 48;
+      panel-position = "TOP";
+      panel-size = 32;
       taskbar-locked = true;
 
       # Transparency / Glass look

@@ -9,12 +9,20 @@
     nemo-fileroller
   ];
 
+  xdg.mimeApps.enable = true;
+
   xdg.mimeApps.defaultApplications = {
     "inode/directory" = ["nemo.desktop"];
+    "application/zip" = ["nemo.desktop"];
+    "application/x-zip-compressed" = ["nemo.desktop"];
+    "application/x-tar" = ["nemo.desktop"];
+    "application/x-gzip" = ["nemo.desktop"];
+    "application/x-bzip2" = ["nemo.desktop"];
+
     "application/x-gnome-saved-search" = ["nemo.desktop"];
   };
 
-  dconf.settings = lib.mkIf osConfig.services.xserver.desktopManager.gnome.enable {
+  dconf.settings = lib.mkIf osConfig.services.desktopManager.gnome.enable {
     # Disable Nautilus from handling the desktop (letting GNOME Shell do it)
     "org/gnome/desktop/background" = {
       show-desktop-icons = false;
