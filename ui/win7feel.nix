@@ -14,19 +14,15 @@
   ];
 
   home.packages = with pkgs; [
-    # The Core Windows 7 Workflow
     gnomeExtensions.dash-to-panel
     gnomeExtensions.arcmenu
 
-    # Keeping the "Aero" Essentials
     gnomeExtensions.blur-my-shell
-    gnomeExtensions.user-themes
+    # gnomeExtensions.user-themes
     gnomeExtensions.just-perfection
     gnomeExtensions.appindicator
 
-    whitesur-gtk-theme
-    whitesur-icon-theme
-    tokyonight-gtk-theme
+    papirus-icon-theme
   ];
 
   dconf.settings = {
@@ -36,7 +32,7 @@
         "dash-to-panel@jderose9.github.com"
         "arcmenu@arcmenu.com"
         "blur-my-shell@aunetx"
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
+        # "user-theme@gnome-shell-extensions.gcampax.github.com"
         "just-perfection-desktop@just-perfection"
         "appindicatorsupport@rgcjonas.gmail.com"
       ];
@@ -87,12 +83,12 @@
 
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
-      gtk-theme = "WhiteSur-Dark";
-      icon-theme = "WhiteSur";
+      gtk-theme = "Adwaita-dark";
+      icon-theme = "Papirus-Dark";
     };
 
-    "org/gnome/shell/extensions/user-theme" = {
-      name = "WhiteSur-Dark";
-    };
+    # "org/gnome/shell/extensions/user-theme" = {
+    #   name = "WhiteSur-Dark";
+    # };
   };
 }
