@@ -24,7 +24,7 @@
         patches =
           (old.patches or [])
           ++ [
-            ./mutter-scroll-speed.patch
+            # ./mutter-scroll-speed.patch
           ];
       });
       inherit
