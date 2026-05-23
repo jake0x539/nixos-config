@@ -22,6 +22,7 @@ in {
     nerd-fonts.ubuntu
     pinta
     github-desktop
+    fastfetch
   ];
 
   # Fish user config stays in home.nix because I want to easily be editing my shell aliases
