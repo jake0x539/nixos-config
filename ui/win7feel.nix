@@ -19,7 +19,7 @@
 
     gnomeExtensions.blur-my-shell
     # gnomeExtensions.user-themes
-    gnomeExtensions.just-perfection
+    # gnomeExtensions.just-perfection
     gnomeExtensions.appindicator
 
     papirus-icon-theme
@@ -33,7 +33,7 @@
         # "arcmenu@arcmenu.com"
         "blur-my-shell@aunetx"
         # "user-theme@gnome-shell-extensions.gcampax.github.com"
-        "just-perfection-desktop@just-perfection"
+        # "just-perfection-desktop@just-perfection"
         "appindicatorsupport@rgcjonas.gmail.com"
       ];
     };
