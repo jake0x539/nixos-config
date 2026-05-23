@@ -44,6 +44,10 @@
       exec-arg = "--working-directory";
     };
 
+    "org/cinnamon/desktop/interface" = {
+      gtk-application-prefer-dark-theme = true;
+    };
+
     "org/gnome/desktop/default-applications/terminal" = {
       exec = "ghostty";
     };

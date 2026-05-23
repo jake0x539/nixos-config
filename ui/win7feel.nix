@@ -85,6 +85,7 @@
       color-scheme = "prefer-dark";
       gtk-theme = "Adwaita-dark";
       icon-theme = "Papirus-Dark";
+      gtk-application-prefer-dark-theme = true;
     };
 
     # "org/gnome/shell/extensions/user-theme" = {
