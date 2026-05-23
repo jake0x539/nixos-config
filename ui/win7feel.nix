@@ -15,7 +15,7 @@
 
   home.packages = with pkgs; [
     gnomeExtensions.dash-to-panel
-    gnomeExtensions.arcmenu
+    # gnomeExtensions.arcmenu
 
     gnomeExtensions.blur-my-shell
     # gnomeExtensions.user-themes
@@ -30,7 +30,7 @@
       disable-user-extensions = false;
       enabled-extensions = [
         "dash-to-panel@jderose9.github.com"
-        "arcmenu@arcmenu.com"
+        # "arcmenu@arcmenu.com"
         "blur-my-shell@aunetx"
         # "user-theme@gnome-shell-extensions.gcampax.github.com"
         "just-perfection-desktop@just-perfection"
