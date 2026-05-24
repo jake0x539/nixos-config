@@ -279,6 +279,7 @@
     imwheel
     distrobox
     distrobox-tui
+    psmisc
   ];
 
   services.xserver.videoDrivers = ["nvidia"];
