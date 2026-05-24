@@ -44,7 +44,7 @@ in {
   services.easyeffects.enable = false;
 
   imports = [
-    ./ui/win7feel.nix
+    ./ui/jakes-gnome.nix
     ./programs/ghostty.nix
     ./programs/obs.nix
   ];
