@@ -250,7 +250,7 @@
   users.users.jake = {
     isNormalUser = true;
     description = "Jake";
-    extraGroups = ["networkmanager" "wheel" "audio"];
+    extraGroups = ["networkmanager" "wheel" "input" "video" "audio"];
     shell = pkgs.fish;
   };
 
