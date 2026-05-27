@@ -21,7 +21,6 @@
     self,
     nixpkgs,
     nixpkgs-unstable,
-    nixpkgs-stable,
     home-manager,
     nix-cachyos-kernel,
     ...
