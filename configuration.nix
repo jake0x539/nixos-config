@@ -169,21 +169,14 @@
   zramSwap = {
     enable = true;
     priority = 100;
+    algorithm = "zstd";
     memoryPercent = 100;
   };
 
-  swapDevices = [
-    {
-      device = "/var/lib/swapfile";
-      size = 8 * 1024;
-      priority = 0;
-    }
-  ];
-
   boot.kernel.sysctl = {
-    "vm.swappiness" = 30;
+    "vm.swappiness" = 150;
+    "vm.page-cluster" = 0;
   };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
