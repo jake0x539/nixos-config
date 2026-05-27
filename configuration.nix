@@ -15,27 +15,27 @@
     ./hardware-configuration.nix
   ];
 
-  # Use Lix as package manager
-  nix.package = pkgs.lixPackageSets.lix_2_95.lix;
+  # # Use Lix as package manager
+  # nix.package = pkgs.lixPackageSets.lix_2_95.lix;
 
-  nixpkgs.overlays = [
-    (final: prev: {
-      mutter = prev.mutter.overrideAttrs (old: {
-        patches =
-          (old.patches or [])
-          ++ [
-            # ./mutter-scroll-speed.patch
-          ];
-      });
-      inherit
-        (prev.lixPackageSets.lix_2_95)
-        nixpkgs-review
-        nix-eval-jobs
-        nix-fast-build
-        colmena
-        ;
-    })
-  ];
+  # nixpkgs.overlays = [
+  #   (final: prev: {
+  #     mutter = prev.mutter.overrideAttrs (old: {
+  #       patches =
+  #         (old.patches or [])
+  #         ++ [
+  #           # ./mutter-scroll-speed.patch
+  #         ];
+  #     });
+  #     inherit
+  #       (prev.lixPackageSets.lix_2_95)
+  #       nixpkgs-review
+  #       nix-eval-jobs
+  #       nix-fast-build
+  #       colmena
+  #       ;
+  #   })
+  # ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
