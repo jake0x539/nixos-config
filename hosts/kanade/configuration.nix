@@ -10,6 +10,7 @@
 
   networking.hostName = "kanade";
   networking.networkmanager.enable = true;
+  services.logind.lidSwitch = "ignore";
 
   fileSystems."/".options = ["noatime" "discard"];
   boot.tmp.useTmpfs = true;
@@ -76,10 +77,18 @@
 
   services.jellyfin = {
     enable = true;
-    openFirewall = true;
+    openFirewall = false;
   };
 
   users.users.jellyfin.extraGroups = ["render" "video"];
+
+  nix.settings.trusted-users = ["root" "@wheel"];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  environment.systemPackages = [
+    pkgs.vim
+    pkgs.ghostty
+  ];
 
   users.users.admin = {
     isNormalUser = true;
