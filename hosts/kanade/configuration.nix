@@ -96,6 +96,7 @@
     extraGroups = ["networkmanager" "wheel"];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILhqkjdzopZ+U4Y3vDGwWRbhx1k32uc9fZO/Ygk9TUWJ ayumu-nixos"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO2j0mrtSdzhjsqLf11CXJLqnP66/x3iz6fOvNxWw3jN kageaki@Chadamasa"
     ];
   };
 
@@ -126,6 +127,7 @@
     group = "sftponly";
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILhqkjdzopZ+U4Y3vDGwWRbhx1k32uc9fZO/Ygk9TUWJ ayumu-nixos"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO2j0mrtSdzhjsqLf11CXJLqnP66/x3iz6fOvNxWw3jN kageaki@Chadamasa"
     ];
   };
 
