@@ -250,7 +250,7 @@
     shell = pkgs.fish;
   };
 
-  home-manager.users.jake = import ./home.nix;
+  home-manager.users.jake = import ../../users/jake/home.nix;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
