@@ -35,8 +35,8 @@ in {
     ";
 
     shellAliases = {
-      sysbuild = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos-config/ #nixos";
-      sysupgrade = "sudo nix flake update --flake ${config.home.homeDirectory}/nixos-config/ && sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos-config/ #nixos";
+      sysbuild = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos-config/ #ayumu";
+      sysupgrade = "sudo nix flake update --flake ${config.home.homeDirectory}/nixos-config/ && sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos-config/ #ayumu";
       cleanup = "sudo nix-collect-garbage -d";
     };
   };
