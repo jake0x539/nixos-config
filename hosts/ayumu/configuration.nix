@@ -140,6 +140,9 @@
   # Flatpaks
   services.flatpak.enable = true;
 
+  # Tailscale
+  services.tailscale.enable = true;
+
   # Finnish support
   services.xserver.xkb = lib.mkForce {
     layout = "us_fi";
