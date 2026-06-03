@@ -12,7 +12,7 @@
 
   networking.hostName = "kanade";
   networking.networkmanager.enable = true;
-  services.logind.lidSwitch = "ignore";
+  services.logind.settings.Login.HandleLidSwitch = "ignore";
 
   fileSystems."/".options = ["noatime" "discard"];
   boot.tmp.useTmpfs = true;
@@ -92,6 +92,8 @@
     vim
     ghostty
     ntfs3g
+    btop
+    ncdu
   ];
 
   users.users.admin = {
