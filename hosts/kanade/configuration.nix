@@ -7,7 +7,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./auto-replaygain.nix
-    ./caddy-homepage.nix
+    ./homepage.nix
   ];
 
   networking.hostName = "kanade";
