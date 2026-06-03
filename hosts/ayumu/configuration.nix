@@ -77,7 +77,7 @@
     '';
   };
 
-  networking.hostName = "nixos";
+  networking.hostName = "ayumu";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Helsinki";
