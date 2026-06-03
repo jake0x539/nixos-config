@@ -9,7 +9,7 @@
     enable = true;
     listenPort = 8082;
 
-    allowedHosts = "kanade,localhost";
+    allowedHosts = "*";
 
     services = [
       {

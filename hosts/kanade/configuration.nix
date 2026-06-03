@@ -16,6 +16,7 @@
 
   fileSystems."/".options = ["noatime" "discard"];
   boot.tmp.useTmpfs = true;
+  boot.supportedFilesystems = [ "ntfs" ];
   services.journald.extraConfig = "SystemMaxUse=100M";
 
   boot.loader.systemd-boot.enable = true;
@@ -90,6 +91,7 @@
   environment.systemPackages = with pkgs; [
     vim
     ghostty
+    ntfs3g
   ];
 
   users.users.admin = {
@@ -140,6 +142,18 @@
     "d /srv/media/movies 0775 sftpuser sftponly"
     "d /srv/media/special 0775 sftpuser sftponly"
   ];
+
+  fileSystems."/mnt/usbHdd" = {
+    device = "/dev/disk/by-uuid/7C34C49E34C45D30";
+    fsType = "ntfs-3g";
+    options = [
+      "rw"
+      "uid=1000"
+      "gid=100"
+      "umask=0022"
+      "nofail"
+    ];
+  };
 
   system.stateVersion = "26.05";
 }
