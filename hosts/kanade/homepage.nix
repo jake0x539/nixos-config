@@ -11,9 +11,21 @@
 
     allowedHosts = "*";
 
+    widgets = [
+          {
+            resources = {
+              cpu = true;
+              temp = true;
+              memory = true;
+              battery = true;
+              disk = "/mnt/usbHdd";
+            };
+          }
+        ];
+
     services = [
       {
-        media = [
+        "Media" = [
           {
             "Jellyfin" = {
               icon = "jellyfin.png";
