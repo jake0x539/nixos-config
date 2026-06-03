@@ -7,6 +7,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./auto-replaygain.nix
+    ./caddy-homepage.nix
   ];
 
   networking.hostName = "kanade";
@@ -137,6 +138,7 @@
     "d /srv/media 0755 root root"
     "d /srv/media/music 0775 sftpuser sftponly"
     "d /srv/media/movies 0775 sftpuser sftponly"
+    "d /srv/media/special 0775 sftpuser sftponly"
   ];
 
   system.stateVersion = "26.05";
