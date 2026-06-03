@@ -121,6 +121,7 @@
 
   services.tailscale.enable = true;
   networking.firewall.allowedUDPPorts = [config.services.tailscale.port];
+  networking.firewall.checkReversePath = "loose";
 
   users.groups.sftponly = {};
   users.users.sftpuser = {

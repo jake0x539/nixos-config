@@ -142,6 +142,7 @@
 
   # Tailscale
   services.tailscale.enable = true;
+  networking.firewall.checkReversePath = "loose";
 
   # Finnish support
   services.xserver.xkb = lib.mkForce {
