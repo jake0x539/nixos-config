@@ -55,7 +55,6 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/kanade/configuration.nix
-          ./hosts/kanade/hardware-configuration.nix
         ];
       };
     };
