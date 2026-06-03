@@ -74,7 +74,7 @@
     settings = {
       Address = "0.0.0.0";
       Port = 4533;
-      MusicFolder = "/srv/media/music";
+      MusicFolder = "/mnt/usbHdd/navidrome_music";
     };
   };
 
