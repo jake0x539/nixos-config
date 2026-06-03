@@ -17,7 +17,7 @@
     description = "Automatically calculate and apply ReplayGain tags to new music";
     script = ''
       # Run easy mode with custom loudness preset
-      ${pkgs.rsgain}/bin/rsgain easy -p /etc/rsgain/presets/loud.ini /srv/media/music
+      ${pkgs.rsgain}/bin/rsgain easy -S -p /etc/rsgain/presets/loud.ini /srv/media/music
     '';
 
     serviceConfig = {
