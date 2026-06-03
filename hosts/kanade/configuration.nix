@@ -6,6 +6,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./auto-replaygain.nix
   ];
 
   networking.hostName = "kanade";
@@ -85,9 +86,9 @@
   nix.settings.trusted-users = ["root" "@wheel"];
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  environment.systemPackages = [
-    pkgs.vim
-    pkgs.ghostty
+  environment.systemPackages = with pkgs; [
+    vim
+    ghostty
   ];
 
   users.users.admin = {
