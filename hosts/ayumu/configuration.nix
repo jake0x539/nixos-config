@@ -319,5 +319,8 @@
 
   hardware.nvidia-container-toolkit.enable = true;
 
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+
   system.stateVersion = "25.11";
 }
