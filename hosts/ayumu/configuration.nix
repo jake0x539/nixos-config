@@ -61,6 +61,11 @@
   boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
   boot.kernelModules = ["ntsync"];
 
+  boot.kernelParams = [
+    "preempt=full"
+    "threadirqs" 
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;

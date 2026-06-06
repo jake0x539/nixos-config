@@ -1,7 +1,7 @@
 {
   description = "Jake's NixOS flake";
   inputs = {
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -35,8 +35,8 @@
           (
             {pkgs, ...}: {
               nixpkgs.overlays = [
-                nix-cachyos-kernel.overlays.pinned
-              ];
+                nix-cachyos-kernel.overlays.default
+		];
             }
           )
           ./hosts/ayumu/configuration.nix
