@@ -8,6 +8,7 @@
     ./hardware-configuration.nix
     ./auto-replaygain.nix
     ./homepage.nix
+    ./forgejo.nix
   ];
 
   networking.hostName = "kanade";
@@ -16,7 +17,7 @@
 
   fileSystems."/".options = ["noatime" "discard"];
   boot.tmp.useTmpfs = true;
-  boot.supportedFilesystems = [ "ntfs" ];
+  boot.supportedFilesystems = ["ntfs"];
   services.journald.extraConfig = "SystemMaxUse=100M";
 
   boot.loader.systemd-boot.enable = true;

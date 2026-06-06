@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  networking.firewall.allowedTCPPorts = [ 8082 ];
+  networking.firewall.allowedTCPPorts = [8082];
 
   services.homepage-dashboard = {
     enable = true;
@@ -12,16 +12,16 @@
     allowedHosts = "*";
 
     widgets = [
-          {
-            resources = {
-              cpu = true;
-              temp = true;
-              memory = true;
-              battery = true;
-              disk = "/mnt/usbHdd";
-            };
-          }
-        ];
+      {
+        resources = {
+          cpu = true;
+          temp = true;
+          memory = true;
+          battery = true;
+          disk = "/mnt/usbHdd";
+        };
+      }
+    ];
 
     services = [
       {
@@ -42,19 +42,39 @@
           }
         ];
       }
+
+      {
+        "Development" = [
+          {
+            "Forgejo" = {
+              icon = "forgejo.png";
+              href = "http://kanade:3000";
+              description = "Git";
+            };
+          }
+        ];
+      }
     ];
 
     bookmarks = [
       {
-        "Development" = [
+        "Nix" = [
           {
             "NixOS Search" = [
-              { abbr = "NS"; href = "https://search.nixos.org/packages"; icon = "nixos.png"; }
+              {
+                abbr = "NS";
+                href = "https://search.nixos.org/packages";
+                icon = "nixos.png";
+              }
             ];
           }
           {
             "Home Manager Option Search" = [
-              { abbr = "HMS"; href = "https://home-manager-options.extranix.com/?query=&release=master"; icon = "nixos.png"; }
+              {
+                abbr = "HMS";
+                href = "https://home-manager-options.extranix.com/?query=&release=master";
+                icon = "nixos.png";
+              }
             ];
           }
         ];
